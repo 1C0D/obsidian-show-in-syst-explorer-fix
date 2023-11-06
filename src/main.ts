@@ -24,21 +24,8 @@ async function openDirectoryInFileManager() {
 	const activeFile = this.app.workspace.getActiveFile();
 	if (activeFile) {
 		const vaultPath = this.app.vault.adapter.basePath;
-		let activeFilePath = activeFile.path;
-		if (activeFilePath.includes("/")) {
-			const lastSlashIndex = activeFilePath.lastIndexOf("/");
-			activeFilePath = activeFilePath.substring(0, lastSlashIndex);
-		} else {
-			activeFilePath = "";
-		}
-
-		let dirPath;
-		if (activeFilePath !== "") {
-			dirPath = path.join(vaultPath, activeFilePath);
-		} else {
-			dirPath = vaultPath;
-		}
-
+		const parentFile = activeFile.parent.path
+		const dirPath = path.join(vaultPath, parentFile);
 		try {
 			await shell.openExternal(dirPath);
 		} catch (err) {
