@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin-modif",
-	"name": "Sample Plugin modif",
+	"id": "show-in-syst-explorer-fix",
+	"name": "Show in syst explorer fix",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "sample plugin modif.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
+	"description": "fix show in system explorer.",
+	"author": "1C0D",
+	"authorUrl": "https://github.com/1C0D/showInSystemExplorerWinFix",
+	"isDesktopOnly": true
 }

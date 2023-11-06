@@ -1,16 +1,4 @@
-# Obsidian Sample Plugin Modif
+# fix show in system explorer
 
-multifiles in src folder  
-i18next
-
-### package.json
-
-- `npm start` -> opening main.ts in VSC + npm install + npm run dev
-- `npm run startf` -> opening src folder in VSC + npm install + npm run dev
-- `npm run acp` -> add + commit + push. with a prompt asking for the commit name 
-- `npm run version` -> new version, with prompt asking for version update option:
-  - patch(1.0.1)
-  - minor(1.1.0)
-  - major(2.0.0) 
-  version updated in local manifest, package and versions 
-    + add, commit, push, with a commit name as "updated to version x.x.x(the new version)" 
+I was fed up to have this error in Windows when doing show in system explorer, so I fixed it
+the bug is the fact to have to click several times in the window taskbar before the window opens. I've reported several time without any success. but it's ok now.
