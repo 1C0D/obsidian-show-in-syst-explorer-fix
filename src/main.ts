@@ -20,14 +20,14 @@ export default class MyPlugin extends Plugin {
 }
 
 async function openDirectoryInFileManager() {
-	let shell = window.electron.shell;
+	let shell = window.electron.remote.shell;
 	const activeFile = this.app.workspace.getActiveFile();
 	if (activeFile) {
 		const vaultPath = this.app.vault.adapter.basePath;
 		const parentFile = activeFile.parent.path
 		const dirPath = path.join(vaultPath, parentFile);
 		try {
-			await shell.openExternal(dirPath);
+			await shell.openPath(dirPath);
 		} catch (err) {
 			console.log(err);
 		}
